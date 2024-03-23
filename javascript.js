@@ -26,10 +26,7 @@ class Teacher extends User {
     }
 
     isGroupTeacher(groupName) {
-        if (this.groups.includes(groupName)) {
-            return true;
-        }
-        return false;
+        return (this.groups.includes(groupName))
     }
 
 }
@@ -44,10 +41,7 @@ class Student extends User {
     }
 
     isEligibleForScholarship() {
-        if (this.averageGrade >= Student.MIN_GRADE_FOR_SCHOLARSHIP) {
-            return true;
-        }
-        return false;
+        return this.averageGrade >= Student.MIN_GRADE_FOR_SCHOLARSHIP
     }
 
 
